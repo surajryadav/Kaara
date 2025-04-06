@@ -1,20 +1,20 @@
 const themeToggle = document.getElementById("themeToggle");
 const cartIcon = document.getElementById("cartIcon");
 
+// Theme toggler
 themeToggle.addEventListener("click", () => {
   const isLight = document.documentElement.getAttribute("data-theme") === "light";
   const newTheme = isLight ? "dark" : "light";
   document.documentElement.setAttribute("data-theme", newTheme);
-  updateIconColors();
 });
 
-function updateIconColors() {
-  const isLight = document.documentElement.getAttribute("data-theme") === "light";
-  const filterValue = isLight ? "invert(0%)" : "invert(100%)";
-  themeToggle.style.filter = filterValue;
-  cartIcon.style.filter = filterValue;
+// Set icons to always appear white
+function setIconColorsAlwaysWhite() {
+  themeToggle.style.filter = "invert(100%)"; // always white
+  cartIcon.style.filter = "invert(100%)";    // always white
 }
-updateIconColors(); // Initial load
+
+setIconColorsAlwaysWhite(); // Initial load
 
 // Auto-changing product cards
 const images = [
