@@ -1,0 +1,28 @@
+body {
+    font-family: 'Inter', sans-serif;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  h1, h2, h3, .banner-title {
+    font-family: 'Playfair Display', serif;
+  }
+  [data-theme="dark"] {
+    background-color: #121212;
+    color: #ffffff;
+  }
+  [data-theme="light"] {
+    background-color: #ffffff;
+    color: #000000;
+  }
+  /* Carousel scroll settings */
+  .carousel::-webkit-scrollbar {
+    display: none;
+  }
+  .carousel {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  /* Smooth animation for auto scroll */
+  .carousel {
+    scroll-behavior: smooth;
+  }
+  
